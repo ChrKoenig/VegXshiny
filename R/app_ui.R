@@ -31,7 +31,7 @@ app_ui <- function(request) {
                           tabPanel("Load VegX", mod_vegxImport_ui("vegxImport"))
                ),
                
-               tabPanel("VegX Document", icon = icon("code", class = "icon-padded-right"),
+               tabPanel("XML Viewer", icon = icon("code", class = "icon-padded-right"),
                         mod_xmlViewer_ui("xmlViewer")
                ),
                

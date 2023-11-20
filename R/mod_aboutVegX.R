@@ -19,25 +19,31 @@ mod_aboutVegX_ui <- function(id){
         tags$h1("VegXshiny", style = "text-align: center",  class = "text-info"),
         tags$h4("An interactive web application for vegetation ecologists", style = "text-align: center; color: grey;"),
         
-        tags$p("The increasing digitization of research data has motivated data standardization efforts across scientific disciplines. The vegetation ecological community has recognized the need for a standardized 
-                exchange format since at least 2003 and published the initial the version of the Veg-X standard in 2008 (Wiser et al., 2011). Veg-X is implemented as an XML schema that provides both flexibility
-                and precision in representing vegetation data of different origin and format."), 
+        tags$p("The increasing digitization of research data has motivated data standardization efforts across scientific disciplines. 
+                The vegetation science community has recognized the need for a standardized exchange format since at least 2003 and 
+                developed the initial version of the Veg-X standard in 2008 (Wiser et al., 2011). Veg-X is implemented as an XML schema 
+                that provides both flexibility and precision in representing vegetation data of different origin and format."), 
         
-        tags$p("Despite being community-driven and designed to be ", tags$i("\"maximally compatible with existing standards and databases\""), " (Wiser et al., 2011), Veg-X has not found wide adoption
-                among vegetation ecologists to this date. One of the reasons for this is the complexity of the format and the lack of ecoinformatics tools to easily access it. A major step towards improving the 
-                accessibility of Veg-X was the publication of the VegX R-package (De C\u00e1ceres, 2018), which provides tools for importing, integrating and exporting vegetation data using the Veg-X standard. 
-                While the VegX package allows users to create Veg-X documents using R programming language, interest in a simple GUI-based application for Veg-X remained high."),
+        tags$p("Veg-X has not found wide adoption among vegetation ecologists to this date. One of the reasons for this was the lack of 
+                tools to easily create Veg-X documents. A major step towards improving the usability of Veg-X was the publication of the 
+                VegX R-package (De Cáceres, 2018), which provides tools for importing, integrating and exporting vegetation data using 
+                the Veg-X standard. While the VegX package allows users to create Veg-X documents using R programming language, interest 
+                in a GUI-based application for Veg-X remained high."),
         
         tags$div(style = "text-align: center",
                  tags$img(src='www/images/vegxshiny_overview.png', align = "center", width = 900)
         ),
         
-        tags$p(tags$span("VegXshiny aims to make the conversion of vegetation data into Veg-X documents as easy as possible.", class = "text-info"), " The graphical user interface of VegXshiny helps users, who have little 
-                experience with programming or markup languages, to build valid Veg-X documents and implement best practices in terms of data management and interoperability. Dynamic import dialogs guide 
-                users through the process of mapping their data to the corresponding Veg-X elements, while ensuring that the generated XML conforms to the Veg-X standard. The ability to view and edit 
-                input files and output VegX documents gives users full control over their data. Finally, an interactive tree viewer of the Veg-X schema helps making the standard accessible and understandable."),
+        tags$p(tags$span("VegXshiny aims to make the conversion of vegetation data into Veg-X documents as easy as possible.", class = "text-info"), 
+                " The graphical user interface of VegXshiny helps users, who have no experience with programming or markup languages (XML 
+                in this case), to build valid Veg-X documents and implement best practices in terms of data management and interoperability. 
+                Dynamic import dialogs guide users through the process of mapping their data to the corresponding Veg-X elements, while 
+                ensuring that the generated XML conforms to the Veg-X standard. The ability to view and edit input files and output VegX 
+                documents gives users full control over their data. Finally, an interactive tree viewer of the Veg-X schema helps making 
+                the standard accessible and understandable."),
         
-        tags$p("The development of VegXshiny is endorsed by the ", tags$a("International Association for Vegetation Science (IAVS)", href = "http://iavs.org/", target = "_blank"), "."),
+        tags$p("The development of VegXshiny is endorsed by the ", tags$a("International Association for Vegetation Science (IAVS)", 
+                href = "http://iavs.org/", target = "_blank"), "."),
         
         
         tags$h3("References"),
@@ -89,7 +95,7 @@ mod_aboutVegX_ui <- function(id){
         
         tags$ol(
           tags$li(tags$a("File Manager", href = paste0("#", ns("file_manager")))),
-          tags$li(tags$a("Veg-X Import", href = paste0("#", ns("vegx_import"))),
+          tags$li(tags$a("Import to Veg-X", href = paste0("#", ns("vegx_import"))),
                   tags$ul(style = "list-style-type: none;",
                           tags$li(tags$a("From Tables", href = paste0("#", ns("import_tables")))),
                           tags$li(tags$a("From Turboveg XML", href = paste0("#", ns("import_turboveg")))),
@@ -120,7 +126,7 @@ mod_aboutVegX_ui <- function(id){
                 offers functionality to view, edit and delete uploaded files. Clicking on one of the file icons under 'Uploaded files' will open an editor in the 
                 'File Editor' pane. Depending on the file type, this may either be a text editor (xml) or a spreadsheet editor (tabular data)."),  # TODO mention column type 
         
-        tags$h2("Veg-X Import", id = ns("vegx_import"), class = "text-info"),
+        tags$h2("Import to Veg-X", id = ns("vegx_import"), class = "text-info"),
         tags$p("The import dialog is the core functionality of Veg-Xshiny. The application supports imports from tabular data, Turboveg XML and. Note that a new import will overwrite the current 
                 Veg-X document, i.e. sequential imports from different source files into the same Veg-X document are currently not possible."),
         tags$h3("From Tables", id = ns("import_tables"), class = "text-info"),
