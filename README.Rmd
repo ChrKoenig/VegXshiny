@@ -27,10 +27,10 @@ The increasing digitization of research data has motivated data standardization 
 recognized the need for a standardized exchange format since at least 2003 and developed the initial version of the Veg-X standard in 2008 (Wiser et al., 2011). 
 Veg-X is implemented as an XML schema that provides both flexibility and precision in representing vegetation data of different origin and format.
 
-Despite being community-driven, Veg-X has not found wide adoption among vegetation ecologists to this date. One of the reasons for this was the lack of 
-tools to easily create Veg-X documents. A major step towards improving the usability of Veg-X was the publication of the VegX R-package (De Cáceres, 2018),
-which provides tools for importing, integrating and exporting vegetation data using the Veg-X standard. While the VegX package allows users to create Veg-X
-documents using R programming language, interest in a GUI-based application for Veg-X remained high.
+Veg-X has not found wide adoption among vegetation ecologists to this date. One of the reasons for this was the lack of tools to easily create 
+Veg-X documents. A major step towards improving the usability of Veg-X was the publication of the VegX R-package (De Cáceres, 2018),
+which provides tools for importing, integrating and exporting vegetation data using the Veg-X standard. While the VegX package allows users to 
+create Veg-X documents using R programming language, interest in a GUI-based application for Veg-X remained high.
 
 <center>
 ![](inst/app/www/images/vegxshiny_UI.png){width=700px}
